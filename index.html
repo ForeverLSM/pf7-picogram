@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pf-피코그램</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <!-- //구글폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- 구글폰트// -->
+    <!-- 눈누폰트 -->   
+    <!-- 프리텐다드고딕체 -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <!--  -->
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/title.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <!-- 제이쿼리 -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            //about에 클릭시 스크롤 이동하게 만드시오
+            $("#title .titlebg a").click(function(){
+                $("html,body").stop().animate({scrollTop:$(window).height()+280},300); 
+                return false;
+            });
+        });
+        $(window).scroll(function(){
+            //헤드애니
+            if($(window).scrollTop()>$("header").height()){//윈도우의 scrollTop위치값이 ~보다 커지면
+               //header에게 class를 붙이시오
+               $("header").addClass("headsub");
+                }else{//그렇지 않는다b면..
+           //   $("body").css("padding-top","0px");
+               $("header").removeClass("headsub")               
+            }
+        });
+         
+        $(document).ready(function(){            
+            //대메뉴 a에 마우스 오버시 실행하시오
+            $("header .wrap ul li a").hover(function(){
+                $("header .headernav .navsub.nav1").hide();
+                $("header .headernav .navsub.nav2").hide();
+            });
+
+            $("header .wrap ul li:nth-child(2) a").hover(function(){
+                $("header .headernav .navsub.nav1").show();
+                $("header .headernav .navsub.nav2").hide();
+            });
+            //메뉴 벗어날시 실행하시오
+            $("header .headernav .navsub.nav1").mouseleave(function(){
+                $(this).hide();
+
+            });
+            //대메뉴 4번 마우스 오버시 실행하시오
+            $("header .wrap ul li:nth-child(4) a").hover(function(){
+                $("header .headernav .navsub.nav2").show();
+                $("header .headernav .navsub.nav1").hide();
+            });
+            //메뉴 벗어날시 실행하시오
+            $("header .headernav .navsub.nav2").mouseleave(function(){
+                $(this).hide();
+            });
+            //윈도우창 열릴시 실행하시오
+            $("section#three .wrap .threeSub li:nth-child(1) a").addClass("threehover");
+            $("section#three .wrap .subImg li:nth-child(1)").show();
+            //secton3 클릭시 실행하시오
+            $("section#three .wrap .threeSub li a").click(function(){
+                $(this).addClass("threehover");
+                $(this).parent().siblings().children().removeClass("threehover")                
+                return false;
+            });
+            $("section#three .wrap .threeSub li:nth-child(1) a").click(function(){
+                $("section#three .wrap .subImg li:nth-child(1)").show();
+                $("section#three .wrap .subImg li:nth-child(1)").siblings().hide();
+            });
+            $("section#three .wrap .threeSub li:nth-child(2) a").click(function(){
+                $("section#three .wrap .subImg li:nth-child(2)").show();
+                $("section#three .wrap .subImg li:nth-child(2)").siblings().hide();
+            });
+            $("section#three .wrap .threeSub li:nth-child(3) a").click(function(){
+                $("section#three .wrap .subImg li:nth-child(3)").show();
+                $("section#three .wrap .subImg li:nth-child(3)").siblings().hide();
+            });
+            $("section#three .wrap .threeSub li:nth-child(4) a").click(function(){
+                $("section#three .wrap .subImg li:nth-child(4)").show();
+                $("section#three .wrap .subImg li:nth-child(4)").siblings().hide();                
+            });
+            $("section#three .wrap .threeSub li:nth-child(5) a").click(function(){
+                $("section#three .wrap .subImg li:nth-child(5)").show();
+                $("section#three .wrap .subImg li:nth-child(5)").siblings().hide();                
+            });
+        });
+    </script>
+
+       <!-- slick 링크-->
+   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- 슬릭슬라이드 -->
+   <script type="text/javascript">
+       $(document).ready(function(){
+            $('.bgslide').slick({
+                    infinite: true,
+                    fade: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                    speed:500,
+                    dots: false,
+                    pauseOnHover: false,
+                    arrows: false
+            });
+        });
+
+   </script>
+       <!-- aos 링크 -->
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script type="text/javascript">
+        $(document).ready(function(){
+            AOS.init();
+        });
+    </script>
+    
+   <!-- 유튜브 영상링크 소스 -->
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery.mb.YTPlayer/3.3.4/css/jquery.mb.YTPlayer.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mb.YTPlayer/3.3.4/jquery.mb.YTPlayer.min.js"></script>
+   <style>
+      /* #background { 
+         z-index: -1;
+      }*/
+      #open1 {
+         z-index: -1; 
+      }
+      #open2{
+         z-index: -1;
+      }
+   </style>
+   <script>
+      jQuery( function() {//$는 jQuery 단축표기, $(document).ready(function(){});에서 $(document).ready를 단축표기 해서 $(function(){});
+         jQuery( '#background,#open1,#open2' ).YTPlayer();
+      });
+   </script>
+
+</head>
+<body>
+    <!-- 헤더 -->
+    <header>
+        <div class="wrap">
+            <h1><a href="">logo</a></h1>
+            <ul class="gnb">
+                <li><a href="">피코그램</a></li>
+                <li><a href="">연구개발</a></li>
+                <li><a href="">제품</a></li>
+                <li><a href="">투자정보</a></li>
+                <li><a href="">뉴스룸</a></li>
+                <li><a href="">고객지원</a></li>
+            </ul>
+            <ul class="hdend">
+                <li><a href="">퓨리얼 브랜드몰</a></li>
+                <li><a href="">EN</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- 타이틀영역 -->
+    <div id="title">
+        <div class="wrap">
+            <div class="bgslide">
+                <div class="ttbg sub1">
+                    <div class="one">
+                        <h2 class="h2">picogram</h2>
+                        <p>지난 20년간 오직 더 나은 미래의 건강한 환경을 위해 고민해 왔습니다.<br>
+                        지속 가능하고 풍요로운 인류의 삶을 만들어 나아가고자 합니다.
+                        </p>
+                    </div>
+                    <!-- 방법 첫번째(폴더상대경로)-->
+                    <!-- <div class="play1">  
+                        <video autoplay muted loop>
+                            <source src="img/title/bg-01.mp4" type="video/mp4">
+                        </video>
+                    </div>-->
+                    
+                    <!-- 방법 두번째(유뷰트영상링크로) -->
+                    <div id="open1" class="play1" data-property="{  
+                        videoURL: 'https://youtu.be/MnTTJZ_m_z4',
+                        mute: true,
+                        showControls: false,
+                        useOnMobile: true,
+                        quality: 'highres',
+                        containment: '#open1',
+                        loop: true,
+                        autoPlay: true,
+                        stopMovieOnBlur: false,
+                        startAt: 0,
+                        opacity: 1
+                        }">
+                    </div>
+                </div>
+                <div class="ttbg sub2">
+                    <div class="two">
+                        <h2 class="h2">더 나은 미래, 풍요로운 삶<br>
+                            피코그램의 가치입니다.
+                        </h2>
+                        <p>우리의 비전은 자연과 조화롭게 번성하고 인류의 번영을 촉진하는<br>
+                        지속 가능한 세상을 만드는데 중점을 두고 있습니다.
+                        </p>
+                    </div>
+                    <div id="open2" class="play2" data-property="{ 
+                        videoURL: 'https://youtu.be/TEXHJB55PWg',
+                        mute: true,
+                        showControls: false,
+                        useOnMobile: true,
+                        quality: 'highres',
+                        containment: '#open2',
+                        loop: true,
+                        autoPlay: true,
+                        stopMovieOnBlur: false,
+                        startAt: 0,
+                        opacity: 1
+                        }">
+                    </div>
+                </div>
+            </div>
+            <div class="nav">
+                <a href="">dot</a>
+                <ul>
+                    <li><a href="">dot</a></li>
+                    <li><a href="">dot</a></li>
+                </ul>
+            </div>
+            <span></span>
+        </div>
+    </div>
+    <!-- 메인영역 -->
+    <main>
+        <section id="one" class="paddingT50 paddingB50">
+            <div class="wrap">
+                <h3 class="h3">
+                    친환경 혁신을 통한<br>
+                    피코그램의 지속 가능한 미래
+                </h3>
+                <ul class="stone">
+                    <li>
+                        <a href="">
+                            <span>
+                                <img src="img/main/main-01_01.jpg" alt="">
+                            </span>
+                            <div class="sttext">
+                                <h4 class="h4">생활환경가전</h4>
+                                <p>
+                                원천기술 개발과 차별화된 소재 기술을 통한 혁신적인 제품으로<br>
+                                생활 환경가전 전문기업이 되도록 노력하겠습니다.
+                                </p>
+                            </div>
+                        </a>
+                        
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>
+                                <img src="img/main/main-01_02.jpg" alt="">
+                             </span>
+                             <div class="sttext">
+                                <h4 class="h4">
+                                    첨단소개 & 부품
+                               </h4>
+                                <p>                                    
+                                    첨단소재 & 부품 등 다양한 분야의 솔루션을 제안하고,<br>
+                                    새로운 글로벌 친환경 시대를 이끌어가는 기업이 되고자 합니다.
+                                </p>
+                             </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>
+                                <img src="img/main/main-01_03.jpg" alt="">
+                             </span>
+                             <div class="sttext">
+                                <h4 class="h4">
+                                    바이오 & 헬스케어
+                                </h4>
+                                <p>                                    
+                                    인류의 건강을 증진시키고 풍요로운 삶을 누릴 수 있도록<br>
+                                    차별화된 차세대 바이오 제품과 솔루션을 제공하조가 합니다.
+                                </p>
+                             </div>
+                         </a>
+                    </li>
+                </ul>
+            </div>
+        </section>        
+        <section id="two" class="paddingT50 paddingB50">
+            <div class="wrap">
+                <div class="hg">
+                    <p>Pure & Real Life</p>
+                    <span>퓨리얼로고</span>
+                    <p>퓨리얼은 환경 보호의 시각에서 인간의 더 나은 삶을 연구합니다.<br>
+                      소비자의 다양한 라이프스타일을 만족시킬 수 있는 혁신적인 제품들로 지속 가능한 환경과<br>
+                      풍요로운 미래를 만들어 나아가고 있습니다.
+                    </p>
+                </div>
+                <div class="mark">
+                    <ul class="mkimg">
+                        <li>
+                            <img src="img/main/section2-01.png" alt="">
+                            <p></p>
+                        </li>
+                        <li>
+                            <img src="img/main/section2-02.png" alt="">
+                            <p></p>
+                        </li>
+                        <li>
+                            <img src="img/main/section2-03.png" alt="">
+                            <p></p>
+                        </li>
+                        <li>
+                            <img src="img/main/section2-04.png" alt="">
+                            <p></p>
+                        </li>
+                        <li>
+                            <img src="img/main/section2-05.png" alt="">
+                            <p></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>        
+        <section id="three" class="paddingT50 paddingB50">
+            <div class="wrap">
+                <div class="trhg">
+                    <h5 class="h5">세계 최고의 기술력</h6>
+                    <h3 class="h3">Invisible world,<br>
+                                   Picogram<br>
+                                   technology!
+                    </h3>
+                    <p>
+                        피코그램은 최고의 연구 인력과 첨단 연구시설을 기반으로 20여년 동안<br>
+                        필터 및 신소재 기술 개발에 매진해 왔습니다. 최고의 기술력으로<br>
+                        생활환경가전 · 첨단소재 & 부품 · 바이오 & 헬스케어 분야를 선도해 나아가겠습니다.
+                    </p>
+                    <a href="">연구소 소개 바로가기</a>
+                </div>
+                <img src="img/main/section-03-01.jpg" alt="">
+            </div>
+        </section>
+        <section id="four" class="paddingT50 paddingB50">
+            <div class="wrap">
+                <div class="frtop">
+                    <div class="topone">
+                        <div class="frhg">
+                            <h3 class="h3">Media</h3>
+                            <p>생활환경가전 전문 기업, 피코그램의 최신 소식을 만나보세요.</p>
+                        </div>
+                        <a href="">피코그램 소식 바로가기</a>
+                   </div>
+                    <div class="slidegr">
+                        <div class="frslide">
+                            <a href=""><img src="" alt=""></a>
+                            <div class="slide">
+                                <h6 class="h6">
+                                    <a href="">News</a>
+                                </h6>
+                                <h4>
+                                    <a href="">피코그램, 셀린스템 B2B 화장품 개발…</a>
+                                </h4>
+                                <p>
+                                    <a href="">[서울=뉴시스] 배요한 기자 = 생활환경가전 전문기업 피코그램이 글로벌 시장</a>
+                                </p>
+                                <span><a href="">VIEW MORE</a></span>
+                            </div>
+                        </div>
+                        <div class="frslide">
+                            <a href=""><img src="" alt=""></a>
+                            <div class="slide">
+                                <h6 class="h6">
+                                    <a href="">News</a>
+                                </h6>
+                                <h4>
+                                    <a href="">피코그램, 중국 정수시스템 기업</a>
+                                </h4>
+                                <p>
+                                    <a href="">피코그램이 중국 글로벌 정수시스템 전문기업 케네이처 헬스 테크놀로지와 카본블록 자동화 </a>
+                                </p>
+                                <span><a href="">VIEW MORE</a></span>
+                            </div>
+                        </div>
+                        <div class="frslide">
+                            <a href=""><img src="" alt=""></a>
+                            <div class="slide">
+                                <h6 class="h6">
+                                    <a href="">News</a>
+                                </h6>
+                                <h4>
+                                    <a href="">피코그램, '퓨리얼 대용량 복합식 가습기'</a>
+                                </h4>
+                                <p>
+                                    <a href="">생활환경가전 전문기업 (주)피코그램(대표 최석림)의 생활가전 전문 브랜드 '퓨리얼(Pureal)'은 신제품 ‘퓨리얼</a>
+                                </p>
+                                <span><a href="">VIEW MORE</a></span>
+                            </div>
+                        </div>
+                        <div class="frslide">
+                            <a href=""><img src="" alt=""></a>
+                            <div class="slide">
+                                <h6 class="h6">
+                                    <a href="">News</a>
+                                </h6>
+                                <h4>
+                                    <a href="">피코그램 퓨리얼, 신제품 '퓨리얼 폴더블 미니 가습기' 출시</a>
+                                </h4>
+                                <p>
+                                    <a href="">생활 환경 가전 전문기업 피코그램(대표 최석림)의 생활가전 전문 브랜드 ‘퓨리얼’은 신제품 ‘퓨리얼</a>
+                                </p>
+                                <span><a href="">VIEW MORE</a></span>
+                            </div>
+                        </div>
+                        <div class="frslide">
+                            <a href=""><img src="" alt=""></a>
+                            <div class="slide">
+                                <h6 class="h6">
+                                    <a href="">News</a>
+                                </h6>
+                                <h4>
+                                    <a href="">피코그램, '2023 암스테르담 정수 박람회' 참가…</a>
+                                </h4>
+                                <p>
+                                    <a href="">[이데일리 양지윤 기자] 피코그램(376180)은 네덜란드 암스테르담에서 오는 9일까지 열리는 암스테르담 정수 박람회 ‘아쿠아텍 2023 (Aquatech Amsterdam 2023)’에</a>
+                                </p>
+                                <span><a href="">VIEW MORE</a></span>
+                            </div>
+                        </div>
+                        <div class="frslide">
+                            <a href=""><img src="" alt=""></a>
+                            <div class="slide">
+                                <h6 class="h6">
+                                    <a href="">News</a>
+                                </h6>
+                                <h4>
+                                    <a href="">2023 Guangzhou Canton Fair에 참가한 퓨리얼</a>
+                                </h4>
+                                <p>
+                                    <a href="">㈜피코그램, 퓨리얼이 2023년 광저우에서 열린
+                                        2023 Guangzhou Canton Fair에 참가하게 되었습니다.</a>
+                                </p>
+                                <span><a href="">VIEW MORE</a></span>
+                            </div>
+                        </div>
+                        <div class="frslide">
+                            <a href=""><img src="" alt=""></a>
+                            <div class="slide">
+                                <h6 class="h6">
+                                    <a href="">News</a>
+                                </h6>
+                                <h4>
+                                    <a href="">피코그램-아이젤-中오셀바이오테크, 3자 업무협약 체결...중국 등 글로벌시장 진출</a>
+                                </h4>
+                                <p>
+                                    <a href="">[서울=뉴스핌] 김양섭 기자 = 피코그램(대표이사 최석림)은 아이젤(Eyesel)과 함께 중국 오리진셀 테크놀로지 그룹(OriginCell Technology Group)의 자회사인 상하이 오셀 바이오테크</a>
+                                </p>
+                                <span><a href="">VIEW MORE</a></span>
+                            </div>
+                        </div>
+                        <div class="frslide">
+                            <a href=""><img src="" alt=""></a>
+                            <div class="slide">
+                                <h6 class="h6">
+                                    <a href="">News</a>
+                                </h6>
+                                <h4>
+                                    <a href="">피코그램, 아이젤 지분 인수 “바이오 및 헬스케어 분야 사업 확장”</a>
+                                </h4>
+                                <p>
+                                    <a href="">[이데일리 이정현 기자] 피코그램(376180)(대표이사 최석림)은 줄기세포 기반 뷰티·헬스케어 기업 아이젤의 주식 2만4000주를 매입하며 지분 12.7%를 확보했다고
+                                    </a>
+                                </p>
+                                <span><a href="">VIEW MORE</a></span>
+                            </div>
+                        </div>
+                        <div class="frslide">
+                            <a href=""><img src="" alt=""></a>
+                            <div class="slide">
+                                <h6 class="h6">
+                                    <a href="">News</a>
+                                </h6>
+                                <h4>
+                                    <a href="">피코그램, 7월11일 임시주총 소집 결의</a>
+                                </h4>
+                                <p>
+                                    <a href="">[서울=뉴시스] 김경택 기자 = 피코그램은 오는 7월11일 임시주주총회 소집을 결의했다고 26일 공시했다.</a>
+                                </p>
+                                <span><a href="">VIEW MORE</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <aside>
+            <a href="">TOP</a>
+        </aside>
+    </main>
+    <!-- 하단영역 -->
+    <footer>
+        <div class="wrap">
+            <div class="ftone">
+                <div class="menu">
+                    <ul>
+                        <li>
+                            <h5>피코그램</h5>
+                            <ul>
+                                <li>CEO 메시지</li>
+                                <li>회사소개</li>
+                                <li>인재채용</li>
+                                <li>오시는길</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h5>연구개발</h5>
+                            <ul>
+                                <li>연구소소개</li>
+                                <li>보유기술</li>
+                                <li>국내외 특허</li>
+                                <li>국책 과제</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h5>제품</h5>
+                            <ul>
+                                <li>Pureal Brand</li>
+                                <li>카운터탑 정수기</li>
+                                <li>언더싱크 정수기</li>
+                                <li>피처 정수기</li>
+                                <li>정수 필터</li>
+                                <li>소재 및 부품</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h5>투자정보</h5>
+                            <ul>
+                                <li>주가정보</li>
+                                <li>공시현황</li>
+                                <li>투자자 공고사항</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h5>뉴스룸</h5>
+                            <ul>
+                                <li>공지사항</li>
+                                <li>피코그램 소식</li>
+                                <li>홍보센터</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h5>고객지원</h5>
+                            <ul>
+                                <li>자료실</li>
+                                <li>B2B 상담문의</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="multi">
+                    <ul>
+                        <li><a href="">퓨리얼 브랜드몰</a></li>
+                        <li><a href="">카달로그 다운로드</a></li>
+                        <li><a href="">B2B 상담문의</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="fttwo">
+                <img src="" alt="">
+                <button>FAMILY SITE</button>
+            </div>
+            <address>
+                대표 : 최석림ㅣ사업자등록번호 : 109-81-76863ㅣ개인정보관리책임자 : 최석림ㅣ문의 : sales@picogram.co.kr                
+                주소 : 21310 인천광역시 부평구 부평북로 118 (청천동) (주)피코그램ㅣ전화 : 032-678-5114ㅣ팩스 : 070-4369-3677
+                </address>
+            <span>Copyright ⓒ PICOGRAM CO.,LTD. All Rights Reserved</span>
+        </div>
+    </footer>
+
+</body>
+</html>
+

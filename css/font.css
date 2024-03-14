@@ -1,0 +1,8 @@
+/* 
+body{
+   font-family: 'Noto Sans KR', sans-serif;
+   font-weight: 200,300,400,500,600,700,800,900;
+}  */
+body {
+   font-family:"Pretendard Variable",Roboto, Pretendard, -apple-system, BlinkMacSystemFont, system-ui, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}

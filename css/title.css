@@ -1,0 +1,90 @@
+#title {
+  
+  overflow: hidden;
+}
+#title .wrap{
+  max-width: 100vw;
+  height: 100vh;
+  /*! width: 100%; */
+}
+#title .wrap .ttbg{
+  width: 100%;
+  height: 100%;
+}
+#title .wrap .ttbg.sub1 {
+  /*! display: none; */
+}
+#title .wrap .ttbg.sub1 .inline-YTPlayer{
+  width: 100%;
+}
+#title .wrap .ttbg.sub1 .one {
+  width: 100%;
+  color: white;
+  position: absolute;
+  z-index: 1;
+  text-align: center;
+  top: 35%;
+
+}
+#title .wrap .ttbg.sub1 .one h2 {
+  font-size: 0;
+  width: 496px;
+  height: 114px;
+  margin: 0 auto;
+  background-image: url(../img/title/title-logo.png);
+  background-repeat: no-repeat;   
+}
+#title .wrap .ttbg.sub1 .one p {
+  
+  line-height: 1.5;
+  font-size: 20px;
+  margin-top: 25px;
+}
+#title .wrap .ttbg.sub1 .play {
+  
+  /*! width: 100%; */
+  /*! height: 100%; */
+}
+
+#title .wrap .ttbg.sub2 {
+
+}
+#title .wrap .ttbg.sub2 .two {
+  width: 100%;
+  color: white;
+  position: absolute;
+  z-index: 1;
+  text-align: center;
+  top: 30%;
+}
+#title .wrap .ttbg.sub2 .two h2 {
+  
+  font-weight: 700;
+  font-size: 60px;
+  letter-spacing: 2px;
+  line-height: 1.6;
+}
+#title .wrap .ttbg.sub2 .two p {
+  
+  line-height: 1.5;
+  font-size: 20px;
+  margin-top: 25px;
+}
+#title .wrap .nav {
+  
+}
+#title .wrap .nav a {
+  
+}
+#title .wrap .nav ul {
+  
+}
+#title .wrap .nav ul li {
+  
+}
+#title .wrap .nav ul li a {
+  
+}
+#title .wrap span {
+  
+}

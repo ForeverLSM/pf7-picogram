@@ -1,0 +1,178 @@
+main {
+  
+}
+main section#one {
+  
+  padding: 140px 0;
+}
+main section#one .wrap {
+  
+  height: 1120px;
+}
+main section#one .wrap h3 {
+  
+  font-weight: 700;
+  line-height: 1.4;
+}
+main section#one .wrap .stone {
+  
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  height: 100%;
+}
+main section#one .wrap .stone li{
+  
+}
+main section#one .wrap .stone li a{
+  
+}
+main section#one .wrap .stone li a span{
+  width: 456px;
+  height: 510px;
+  display: block;
+  overflow: hidden;
+}
+
+main section#one .wrap .stone li a span img{
+  
+}
+main section#one .wrap .stone li a span img:hover{
+  
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+main section#one .wrap .stone li .sttext{
+  
+  text-align: center;
+}
+main section#one .wrap .stone li .sttext h4{
+  
+  margin: 20px 0 10px;
+  font-weight: 700;
+}
+main section#one .wrap .stone li .sttext p{
+  
+  color: #4a4a4a;
+  line-height: 1.4;
+}
+main section#two {
+  
+}
+main section#two .wrap {
+  
+}
+main section#two .wrap .hg {
+  
+}
+main section#two .wrap .hg p {
+  
+}
+main section#two .wrap .hg span {
+  
+}
+main section#two .wrap .mark {
+  
+}
+main section#two .wrap .mark .mkimg {
+  
+}
+main section#two .wrap .mark .mkimg li {
+  
+}
+main section#two .wrap .mark .mkimg li img {
+  
+}
+main section#two .wrap .mark .mkimg li p {
+  
+}
+main section#three {
+  
+}
+main section#three .wrap {
+  
+}
+main section#three .wrap .trhg {
+  
+}
+main section#three .wrap .trhg h5 {
+  
+}
+main section#three .wrap .trhg h3 {
+  
+}
+main section#three .wrap .trhg p {
+  
+}
+main section#three .wrap .trhg a {
+  
+}
+main section#three .wrap img {
+  
+}
+main section#four {
+  
+}
+main section#four .wrap {
+  
+}
+main section#four .wrap .frtop {
+  
+}
+main section#four .wrap .frtop .topone {
+  
+}
+main section#four .wrap .frtop .topone .frhg {
+  
+}
+main section#four .wrap .frtop .topone .frhg h3 {
+  
+}
+main section#four .wrap .frtop .topone .frhg p {
+  
+}
+main section#four .wrap .frtop .slidegr {
+  
+}
+main section#four .wrap .frtop .slidegr .frslide {
+  
+}
+main section#four .wrap .frtop .slidegr .frslide a {
+  
+}
+main section#four .wrap .frtop .slidegr .frslide a img {
+  
+}
+main section#four .wrap .frtop .slidegr .frslide .slide {
+  
+}
+main section#four .wrap .frtop .slidegr .frslide .slide h6 {
+  
+}
+main section#four .wrap .frtop .slidegr .frslide .slide h6 a {
+  
+}
+main section#four .wrap .frtop .slidegr .frslide .slide h4 {
+  
+}
+main section#four .wrap .frtop .slidegr .frslide .slide h4 a {
+  
+}
+main section#four .wrap .frtop .slidegr .frslide .slide p {
+  
+}
+main section#four .wrap .frtop .slidegr .frslide .slide p a {
+  
+}
+main section#four .wrap .frtop .slidegr .frslide .slide span {
+  
+}
+main section#four .wrap .frtop .slidegr .frslide .slide span a {
+  
+}
+main aside {
+  
+}
+main aside a {
+  
+}

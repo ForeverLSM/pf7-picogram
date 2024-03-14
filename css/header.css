@@ -1,0 +1,121 @@
+body{
+  
+  position: relative;
+}
+header {
+  width: 100%;
+  height: 100px;
+  background-color: transparent;
+  position: absolute;
+  z-index: 1;
+}
+header:hover {
+  color: black;
+}
+header .wrap {
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 70px;
+  box-sizing: border-box;
+}
+header .wrap h1 {
+
+}
+header .wrap h1 a{
+  font-size: 0;
+  background-image: url(../img/header/logo.png);
+  background-size: contain;
+  width: 143px;
+  height: 33px;
+  display: block;  
+}
+header .wrap .gnb {
+  
+  display: flex;
+  width: 750px;
+  justify-content: space-between;
+  text-align: center;
+}
+header .wrap .gnb li {
+  
+  width: calc(100%/6);
+}
+header .wrap .gnb li a {
+  
+  display: block;
+  height: 100px;
+  line-height: 100px;
+  padding: 0 15px;
+  color: white;
+  font-weight: 500;
+}
+header .wrap .hdend {
+  
+  display: flex;
+  width: 264px;
+  justify-content: space-between;
+}
+header .wrap .hdend li {
+  
+}
+header .wrap .hdend li a {
+  
+  color: white;
+  text-align: center;
+}
+header .wrap .hdend li:nth-child(1) a {
+  width: 189px;
+  height: 50px;
+  display: block;
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: 50px;
+  line-height: 50px;
+}
+header .wrap .hdend li:nth-child(1) a::before{
+  content:"";
+  display: inline-block; 
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/header/header_ico02_w.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: sub;
+  margin-right: 5px;
+}
+header .wrap .hdend li:nth-child(1) a::after{
+  content:"";
+  display: inline-block; 
+  width: 8px;
+  height: 9px;
+  background-image: url(../img/header/header_ico01_w.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+header .wrap .hdend li:nth-child(2) a{
+  
+  height: 50px;
+  display: block;
+  line-height: 50px;
+}
+header .wrap .hdend li:nth-child(2) a::before{
+  content:"";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-image: url(../img/header/lan_white.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: -2px;
+  margin-right: 10px;
+}
+.on{
+    
+}
