@@ -41,61 +41,9 @@
             }
         });
          
-        $(document).ready(function(){            
-            //대메뉴 a에 마우스 오버시 실행하시오
-            $("header .wrap ul li a").hover(function(){
-                $("header .headernav .navsub.nav1").hide();
-                $("header .headernav .navsub.nav2").hide();
-            });
-
-            $("header .wrap ul li:nth-child(2) a").hover(function(){
-                $("header .headernav .navsub.nav1").show();
-                $("header .headernav .navsub.nav2").hide();
-            });
-            //메뉴 벗어날시 실행하시오
-            $("header .headernav .navsub.nav1").mouseleave(function(){
-                $(this).hide();
-
-            });
-            //대메뉴 4번 마우스 오버시 실행하시오
-            $("header .wrap ul li:nth-child(4) a").hover(function(){
-                $("header .headernav .navsub.nav2").show();
-                $("header .headernav .navsub.nav1").hide();
-            });
-            //메뉴 벗어날시 실행하시오
-            $("header .headernav .navsub.nav2").mouseleave(function(){
-                $(this).hide();
-            });
-            //윈도우창 열릴시 실행하시오
-            $("section#three .wrap .threeSub li:nth-child(1) a").addClass("threehover");
-            $("section#three .wrap .subImg li:nth-child(1)").show();
-            //secton3 클릭시 실행하시오
-            $("section#three .wrap .threeSub li a").click(function(){
-                $(this).addClass("threehover");
-                $(this).parent().siblings().children().removeClass("threehover")                
-                return false;
-            });
-            $("section#three .wrap .threeSub li:nth-child(1) a").click(function(){
-                $("section#three .wrap .subImg li:nth-child(1)").show();
-                $("section#three .wrap .subImg li:nth-child(1)").siblings().hide();
-            });
-            $("section#three .wrap .threeSub li:nth-child(2) a").click(function(){
-                $("section#three .wrap .subImg li:nth-child(2)").show();
-                $("section#three .wrap .subImg li:nth-child(2)").siblings().hide();
-            });
-            $("section#three .wrap .threeSub li:nth-child(3) a").click(function(){
-                $("section#three .wrap .subImg li:nth-child(3)").show();
-                $("section#three .wrap .subImg li:nth-child(3)").siblings().hide();
-            });
-            $("section#three .wrap .threeSub li:nth-child(4) a").click(function(){
-                $("section#three .wrap .subImg li:nth-child(4)").show();
-                $("section#three .wrap .subImg li:nth-child(4)").siblings().hide();                
-            });
-            $("section#three .wrap .threeSub li:nth-child(5) a").click(function(){
-                $("section#three .wrap .subImg li:nth-child(5)").show();
-                $("section#three .wrap .subImg li:nth-child(5)").siblings().hide();                
-            });
-        });
+        /*$(document).ready(function(){            
+         
+        });*/
     </script>
 
        <!-- slick 링크-->
@@ -241,7 +189,7 @@
     <!-- 메인영역 -->
     <main>
         <section id="one" class="paddingT50 paddingB50">
-            <div class="wrap">
+            <div class="wrap">                
                 <h3 class="h3">
                     친환경 혁신을 통한<br>
                     피코그램의 지속 가능한 미래
@@ -300,34 +248,36 @@
         <section id="two" class="paddingT50 paddingB50">
             <div class="wrap">
                 <div class="hg">
-                    <p>Pure & Real Life</p>
-                    <span>퓨리얼로고</span>
-                    <p>퓨리얼은 환경 보호의 시각에서 인간의 더 나은 삶을 연구합니다.<br>
-                      소비자의 다양한 라이프스타일을 만족시킬 수 있는 혁신적인 제품들로 지속 가능한 환경과<br>
-                      풍요로운 미래를 만들어 나아가고 있습니다.
-                    </p>
+                    <div class="hg-text">
+                        <p>Pure & Real Life</p>
+                        <span>퓨리얼로고</span>
+                        <p>퓨리얼은 환경 보호의 시각에서 인간의 더 나은 삶을 연구합니다.<br>
+                        소비자의 다양한 라이프스타일을 만족시킬 수 있는 혁신적인 제품들로 지속 가능한 환경과<br>
+                        풍요로운 미래를 만들어 나아가고 있습니다.
+                        </p>
+                   </div>
                 </div>
                 <div class="mark">
                     <ul class="mkimg">
                         <li>
                             <img src="img/main/section2-01.png" alt="">
-                            <p></p>
+                            <p>Innovative</p>
                         </li>
                         <li>
                             <img src="img/main/section2-02.png" alt="">
-                            <p></p>
+                            <p>Advanced</p>
                         </li>
                         <li>
                             <img src="img/main/section2-03.png" alt="">
-                            <p></p>
+                            <p>Reasonable</p>
                         </li>
                         <li>
                             <img src="img/main/section2-04.png" alt="">
-                            <p></p>
+                            <p>Eco-Friendly</p>
                         </li>
                         <li>
                             <img src="img/main/section2-05.png" alt="">
-                            <p></p>
+                            <p>Qualified</p>
                         </li>
                     </ul>
                 </div>
@@ -338,17 +288,16 @@
                 <div class="trhg">
                     <h5 class="h5">세계 최고의 기술력</h6>
                     <h3 class="h3">Invisible world,<br>
-                                   Picogram<br>
-                                   technology!
+                                   Picogram technology!
                     </h3>
                     <p>
                         피코그램은 최고의 연구 인력과 첨단 연구시설을 기반으로 20여년 동안<br>
                         필터 및 신소재 기술 개발에 매진해 왔습니다. 최고의 기술력으로<br>
                         생활환경가전 · 첨단소재 & 부품 · 바이오 & 헬스케어 분야를 선도해 나아가겠습니다.
                     </p>
-                    <a href="">연구소 소개 바로가기</a>
+                    <a href=""><span>연구소 소개 바로가기</span></a>
                 </div>
-                <img src="img/main/section-03-01.jpg" alt="">
+                <span><img src="img/main/section-03-01.jpg" alt=""></span>
             </div>
         </section>
         <section id="four" class="paddingT50 paddingB50">
