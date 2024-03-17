@@ -259,15 +259,12 @@ main section#three .wrap span img:hover{
 }
 main section#four {
   
-  width: 100%;
 }
 main section#four .wrap {
   
-  width: 100%;
 }
 main section#four .wrap .frtop {
   
-  width: 100%;
 }
 main section#four .wrap .frtop .topone {
   
@@ -340,9 +337,54 @@ main section#four .wrap .frtop .topone a span::after{
 }
 main section#four .wrap .frtop .slidegr {
   
-  width: 100%;
 }
 
+main section#four .wrap .frtop .slidegr .slick-list{
+  
+}
+main section#four .wrap .frtop .slidegr .slick-dots{
+  
+  width: 100%;
+  height: 5px;
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 30px;
+  background-color: #eee !important;
+}
+main section#four .wrap .frtop .slidegr .slick-dots li{
+  
+  width: calc(100% / 5);
+  margin: 0;
+  border-radius: 30px;
+}
+main section#four .wrap .frtop .slidegr .slick-dots li button{ 
+  width: 100%;
+}
+main section#four .wrap .frtop .slidegr .slick-dots li button::before{
+  
+  width: 100%;
+  background-color: #eee;
+  height: 5px;
+  top: 8px;
+  font-size: 0;
+  transition: 0.5s;
+  opacity: 1;
+  border-radius: 30px;
+}
+main section#four .wrap .frtop .slidegr .slick-dots li.slick-active button::before{
+  
+  opacity: 1;
+  border-radius: 30px;
+  background-color: #9d1e34;
+}
+
+.slick-dots li button:hover::before{
+   /*! opacity: 0 !important; */; 
+}
+main section#four .wrap .frtop .slidegr .slick-dots .slick-slide-control10{
+  
+}
 main section#four .wrap .frtop .slidegr .slick-track{
   
 }
