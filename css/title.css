@@ -24,8 +24,16 @@
   z-index: 1;
   text-align: center;
   top: 35%;
-
+  opacity: 0;
+  transform: translateY(100px);
+  
 }
+.fadeUp{
+  opacity:  1 !important;   
+  transform: translateY(0px) !important;
+  transition: 3s;
+}
+
 #title .wrap .ttbg.sub1 .one h2 {
   font-size: 0;
   width: 496px;

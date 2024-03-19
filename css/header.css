@@ -6,12 +6,14 @@ header {
   width: 100%;
   height: 100px;
   background-color: transparent;
-  position: absolute;
+  position: fixed;
   z-index: 1;
+ 
 }
 header:hover {
   color: black;
 }
+
 header .wrap {
   max-width: 100%;
   height: 100%;

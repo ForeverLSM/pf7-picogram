@@ -25,7 +25,10 @@
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
-            //about에 클릭시 스크롤 이동하게 만드시오
+            $("#title .wrap .ttbg.sub1 .one").addClass("fadeUp");
+            
+
+        /*    //about에 클릭시 스크롤 이동하게 만드시오
             $("#title .titlebg a").click(function(){
                 $("html,body").stop().animate({scrollTop:$(window).height()+280},300); 
                 return false;
@@ -39,12 +42,11 @@
                 }else{//그렇지 않는다b면..
            //   $("body").css("padding-top","0px");
                $("header").removeClass("headsub")               
-            }
+            }*/
         });
-         
-        /*$(document).ready(function(){            
-         
-        });*/
+
+      /*  $(document).ready(function(){
+        }); */
     </script>
 
     <!-- slick 링크-->
@@ -59,8 +61,8 @@
                     fade: true,
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    autoplay: true,
-                    autoplaySpeed: 2000,
+                    autoplay: false,
+                    autoplaySpeed: 5000,
                     speed:500,
                     dots: false,
                     pauseOnHover: false,
@@ -72,14 +74,24 @@
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     autoplay: false,
-                    autoplaySpeed: 2000,
+                    autoplaySpeed: 5000,
                     speed:500,
                     dots: true,
                     pauseOnHover: true,
                     arrows: false
             });
         });
-
+        $(window).scroll(function(){
+            //헤드애니
+            if($(window).scrollTop()>$("header").height()){//윈도우의 scrollTop위치값이 ~보다 커지면
+               //header에게 class를 붙이시오
+               $("header").stop().slideUp();
+                }else{//그렇지 않는다면..
+           //   $("body").css("padding-top","0px");
+               $("header").stop().slideDown();
+               return false;
+            }
+        });
    </script>
     <!-- aos 링크 -->
    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -93,7 +105,7 @@
    <!-- 유튜브 영상링크 소스 -->
    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery.mb.YTPlayer/3.3.4/css/jquery.mb.YTPlayer.min.css">
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mb.YTPlayer/3.3.4/jquery.mb.YTPlayer.min.js"></script>
-
+   
    <script>
       jQuery( function() {//$는 jQuery 단축표기, $(document).ready(function(){});에서 $(document).ready를 단축표기 해서 $(function(){});
          jQuery( '#background,#open1,#open2' ).YTPlayer();
@@ -132,13 +144,13 @@
                         </p>
                     </div>
                     <!-- 방법 첫번째(폴더상대경로)-->
-                    <!-- <div class="play1">  
+                     <div class="play1">  
                         <video autoplay muted loop>
                             <source src="img/title/bg-01.mp4" type="video/mp4">
                         </video>
-                    </div>-->
+                    </div>
                     
-                    <!-- 방법 두번째(유뷰트영상링크로) -->
+                    <!-- 방법 두번째(유뷰트영상링크로) 
                     <div id="open1" class="play1" data-property="{  
                         videoURL: 'https://youtu.be/MnTTJZ_m_z4',
                         mute: true,
@@ -152,7 +164,7 @@
                         startAt: 0,
                         opacity: 1
                         }">
-                    </div>
+                    </div>-->
                 </div>
                 <div class="ttbg sub2">
                     <div class="two">
@@ -163,7 +175,12 @@
                         지속 가능한 세상을 만드는데 중점을 두고 있습니다.
                         </p>
                     </div>
-                    <div id="open2" class="play2" data-property="{ 
+                    <div class="play2">  
+                        <video autoplay muted loop>
+                            <source src="img/title/bg-02.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <!-- <div id="open2" class="play2" data-property="{  
                         videoURL: 'https://youtu.be/TEXHJB55PWg',
                         mute: true,
                         showControls: false,
@@ -176,7 +193,7 @@
                         startAt: 0,
                         opacity: 1
                         }">
-                    </div>
+                    </div>-->
                 </div>
             </div>
             <div class="nav">
@@ -193,11 +210,11 @@
     <main>
         <section id="one" class="paddingT50 paddingB50">
             <div class="wrap">                
-                <h3 class="h3">
+                <h3 data-aos="fade-up" data-aos-duration="1000" class="h3">
                     친환경 혁신을 통한<br>
                     피코그램의 지속 가능한 미래
                 </h3>
-                <ul class="stone">
+                <ul data-aos="fade-up" data-aos-duration="1000" class="stone">
                     <li>
                         <a href="">
                             <span>
@@ -251,7 +268,7 @@
         <section id="two" class="paddingT50 paddingB50">
             <div class="wrap">
                 <div class="hg">
-                    <div class="hg-text">
+                    <div data-aos="fade-up" data-aos-duration="1000" class="hg-text">
                         <p>Pure & Real Life</p>
                         <span>퓨리얼로고</span>
                         <p>퓨리얼은 환경 보호의 시각에서 인간의 더 나은 삶을 연구합니다.<br>
@@ -288,7 +305,7 @@
         </section>        
         <section id="three" class="paddingT50 paddingB50">
             <div class="wrap">
-                <div class="trhg">
+                <div data-aos="fade-up" data-aos-duration="1000" class="trhg">
                     <h5 class="h5">세계 최고의 기술력</h6>
                     <h3 class="h3">Invisible world,<br>
                                    Picogram technology!
@@ -300,12 +317,12 @@
                     </p>
                     <a href=""><span>연구소 소개 바로가기</span></a>
                 </div>
-                <span><img src="img/main/section-03-01.jpg" alt=""></span>
+                <span data-aos="fade-left" data-aos-duration="1000"><img src="img/main/section-03-01.jpg" alt=""></span>
             </div>
         </section>
         <section id="four" class="paddingT50 paddingB50">
             <div class="wrap">
-                <div class="frtop">
+                <div data-aos="fade-up" data-aos-duration="1000" class="frtop">
                     <div class="topone">
                         <div class="frhg">
                             <h3 class="h3">Media</h3>

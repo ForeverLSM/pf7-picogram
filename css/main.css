@@ -73,6 +73,20 @@ main section#two .wrap .hg {
   background-size: cover;
   background-attachment: fixed;
 }
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  clip-path: circle(0% at 50% 50%);
+  transition: clip-path 0.5s, opacity 0.5s ease-in-out;
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+  clip-path: circle(100% at 50% 50%);
+}
+
 main section#two .wrap .hg .hg-text{
   height: 55%;
   text-align: center;
