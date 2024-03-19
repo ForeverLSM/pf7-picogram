@@ -354,6 +354,12 @@ main section#four .wrap .frtop .slidegr .slick-dots{
   justify-content: space-between;
   align-items: center;
   transform: translateY(40px);
+<<<<<<< HEAD
+=======
+}
+main section#four .wrap .frtop .slidegr .slick-dots::after{
+  
+>>>>>>> be6a10789b908756c7e5b546cdd5a7befe54ecdf
 }
 main section#four .wrap .frtop .slidegr .slick-dots li{
   
@@ -364,8 +370,7 @@ main section#four .wrap .frtop .slidegr .slick-dots li{
 main section#four .wrap .frtop .slidegr .slick-dots li button{ 
   width: 100%;
 }
-main section#four .wrap .frtop .slidegr .slick-dots li button::before{
-  
+main section#four .wrap .frtop .slidegr .slick-dots li button::before{  
   width: 100%;
   background-color: #eee;
   height: 5px;
@@ -508,5 +513,18 @@ main aside {
   
 }
 main aside a {
-  
+  width: 60px;
+  height: 60px;
+  background-color: #a6a6a6;
+  display: block;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: white;
+  text-align: center;
+  line-height: 60px;
+  transition: 0.5s;
+}
+main aside a:hover {
+  background-color: #9d1e34;
 }
