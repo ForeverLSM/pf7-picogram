@@ -163,6 +163,7 @@ main section#two .wrap .mark .mkimg li p {
 }
 main section#three {
   
+  padding-bottom: 200px;
 }
 main section#three .wrap {
   
@@ -259,6 +260,8 @@ main section#three .wrap span img:hover{
 }
 main section#four {
   
+  padding: 170px 0 190px;
+  background-color: #fbfbfb;
 }
 main section#four .wrap {
   
@@ -319,10 +322,12 @@ main section#four .wrap .frtop .topone a::after{
   top: 0;
   border-radius: 30px;
   transition: all ease 0.3s;
-  z-index: -1;
+  z-index: 0;
 }
 main section#four .wrap .frtop .topone a span{
   line-height: 57px;
+  position: relative;
+  z-index: 1;
 }
 main section#four .wrap .frtop .topone a:hover span::after{
   background-image: url(../img/main/go.png);
@@ -345,12 +350,10 @@ main section#four .wrap .frtop .slidegr .slick-list{
 main section#four .wrap .frtop .slidegr .slick-dots{
   
   width: 100%;
-  height: 5px;
   display: flex !important;
   justify-content: space-between;
   align-items: center;
-  border-radius: 30px;
-  background-color: #eee !important;
+  transform: translateY(40px);
 }
 main section#four .wrap .frtop .slidegr .slick-dots li{
   
@@ -423,11 +426,18 @@ main section#four .wrap .frtop .slidegr .frslide a {
   column-gap: 40px;
   width: fit-content;
 }
-main section#four .wrap .frtop .slidegr .frslide a img {
+main section#four .wrap .frtop .slidegr .frslide a div{
   
   width: 320px;
   height: 440px;
-  display: block;
+  overflow: hidden;
+}
+main section#four .wrap .frtop .slidegr .frslide a img {
+  
+}
+main section#four .wrap .frtop .slidegr .frslide a:hover img{
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 main section#four .wrap .frtop .slidegr .frslide .slide {
   
