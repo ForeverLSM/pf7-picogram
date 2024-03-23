@@ -23,17 +23,52 @@
     <link rel="stylesheet" href="css/youtube.css">
     <!-- 제이쿼리 -->
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+       <!-- slick 링크-->
+   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!-- 슬릭슬라이드 -->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            // 슬라이드 쇼 초기화
+            $('.bgslide').slick({
+                infinite: true,
+                fade: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                speed:500,
+                dots: true,
+                pauseOnHover: false,
+                arrows: false
+            });
+
+            $('.slidegr').slick({
+                infinite: true,
+                fade: false,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: false,
+                autoplaySpeed: 5000,
+                speed:500,
+                dots: true,
+                pauseOnHover: true,
+                arrows: false
+            });
+        });
+    </script>
+
     <script type="text/javascript">
         $(document).ready(function(){
             $("#title .wrap .ttbg.sub1 .one").addClass("fadeUp");
-            
-
-        /*    //about에 클릭시 스크롤 이동하게 만드시오
+            $("#title .wrap .ttbg.sub2 .two").addClass("fadeUp");
+    /*    //about에 클릭시 스크롤 이동하게 만드시오
             $("#title .titlebg a").click(function(){
                 $("html,body").stop().animate({scrollTop:$(window).height()+280},300); 
                 return false;
+                });
             });
-        });
         $(window).scroll(function(){
             //헤드애니
             if($(window).scrollTop()>$("header").height()){//윈도우의 scrollTop위치값이 ~보다 커지면
@@ -44,43 +79,9 @@
                $("header").removeClass("headsub")               
             }*/
         });
-
-      /*  $(document).ready(function(){
-        }); */
     </script>
 
-    <!-- slick 링크-->
-   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-   <!-- 슬릭슬라이드 -->
-   <script type="text/javascript">
-       $(document).ready(function(){
-            $('.bgslide').slick({
-                    infinite: true,
-                    fade: true,
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    autoplay: false,
-                    autoplaySpeed: 5000,
-                    speed:500,
-                    dots: false,
-                    pauseOnHover: false,
-                    arrows: false
-            });
-            $('.slidegr').slick({
-                    infinite: true,
-                    fade: false,
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    autoplay: false,
-                    autoplaySpeed: 5000,
-                    speed:500,
-                    dots: true,
-                    pauseOnHover: true,
-                    arrows: false
-            });
-        });
+    <script>
         $(window).scroll(function(){
             //헤드애니
             if($(window).scrollTop()>$("header").height()){//윈도우의 scrollTop위치값이 ~보다 커지면
@@ -107,10 +108,11 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mb.YTPlayer/3.3.4/jquery.mb.YTPlayer.min.js"></script>
    
    <script>
-      jQuery( function() {//$는 jQuery 단축표기, $(document).ready(function(){});에서 $(document).ready를 단축표기 해서 $(function(){});
-         jQuery( '#background,#open1,#open2' ).YTPlayer();
-      });
+       jQuery( function() {//$는 jQuery 단축표기, $(document).ready(function(){});에서 $(document).ready를 단축표기 해서 $(function(){});
+            jQuery( '#background,#open1,#open2' ).YTPlayer();
+       });
    </script>
+
 
 </head>
 <body>
@@ -138,7 +140,7 @@
             <div class="bgslide">
                 <div class="ttbg sub1">
                     <div class="one">
-                        <h2 class="h2">picogram</h2>
+                        <h2 class="h2 test">picogram</h2>
                         <p>지난 20년간 오직 더 나은 미래의 건강한 환경을 위해 고민해 왔습니다.<br>
                         지속 가능하고 풍요로운 인류의 삶을 만들어 나아가고자 합니다.
                         </p>
@@ -180,7 +182,7 @@
                             <source src="img/title/bg-02.mp4" type="video/mp4">
                         </video>
                     </div>
-                    <!-- <div id="open2" class="play2" data-property="{  
+                    <!--<div id="open2" class="play2" data-property="{  
                         videoURL: 'https://youtu.be/TEXHJB55PWg',
                         mute: true,
                         showControls: false,
@@ -197,11 +199,11 @@
                 </div>
             </div>
             <div class="nav">
-                <a href="">dot</a>
-                <ul>
-                    <li><a href="">dot</a></li>
-                    <li><a href="">dot</a></li>
-                </ul>
+                <a href="">dot
+                    <svg class="circle-svg">
+                        <circle class="circle" cx="25" cy="25" r="24">
+                    </svg>
+                </a>
             </div>
             <span></span>
         </div>

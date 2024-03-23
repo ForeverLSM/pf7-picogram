@@ -7,6 +7,52 @@
   height: 100vh;
   /*! width: 100%; */
 }
+#title .wrap .bgslide{
+  
+}
+#title .wrap .bgslide .slick-list{
+  
+} 
+#title .wrap .bgslide .slick-list .slick-track{
+  
+}
+#title .wrap .bgslide .slick-dots{
+  
+  display: flex;
+  flex-direction: column;
+  width: 10px;
+  height: 50px;
+  top: 38%;
+  left: 70px;
+}
+#title .wrap .bgslide .slick-dots li{
+  opacity: 0.4;
+  margin: 10px 0px;
+}
+#title .wrap .bgslide .slick-dots li button::before{
+  
+  color: white;
+  opacity: 1;
+  font-size: 8px;
+}
+#title .wrap .bgslide .slick-dots .slick-active{
+  
+  opacity: 1;
+}
+#title .wrap .bgslide .slick-dots .slick-active button::before{
+
+  font-size: 10px;
+}
+#slick-slide-control00{
+  
+}
+#slick-slide-control00::before{
+ 
+}
+#slick-slide-control01{
+  
+}
+
 #title .wrap .ttbg{
   width: 100%;
   height: 100%;
@@ -26,11 +72,13 @@
   top: 35%;
   opacity: 0;
   transform: translateY(100px);
+}
+#title .wrap .ttbg.sub1 .play1{
   
 }
 .fadeUp{
   opacity:  1 !important;   
-  transform: translateY(0px) !important;
+  transform: translateY(-60px) !important;
   transition: 3s;
 }
 
@@ -42,6 +90,7 @@
   background-image: url(../img/title/title-logo.png);
   background-repeat: no-repeat;   
 }
+
 #title .wrap .ttbg.sub1 .one p {
   
   line-height: 1.5;
@@ -64,6 +113,8 @@
   z-index: 1;
   text-align: center;
   top: 30%;
+  opacity: 0;
+  transform: translateY(100px);
 }
 #title .wrap .ttbg.sub2 .two h2 {
   
@@ -79,20 +130,37 @@
   margin-top: 25px;
 }
 #title .wrap .nav {
-  
+  position: absolute;
+  top: 40%;
+  left: 70px;
+  /*! display: none; */
+  z-index: 1;
 }
 #title .wrap .nav a {
-  
+  font-size: 0;
+  position: absolute;
+  left: -15px;
 }
-#title .wrap .nav ul {
-  
+#title .wrap .nav a .circle-svg{
+  width: 50px;
+  height: 50px;
 }
-#title .wrap .nav ul li {
-  
+#title .wrap .nav a .circle-svg .circle{
+  stroke: white; /* 테두리 색상 설정 */
+  stroke-width: 1; /* 테두리 두께 설정 */
+  fill: none; /* 내부를 채우지 않음 */
 }
-#title .wrap .nav ul li a {
-  
+.circle {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: circle-progress 5.3s linear infinite; /* 무한 반복을 위해 infinite 설정 */
 }
-#title .wrap span {
-  
+
+@keyframes circle-progress {
+  0% {
+    stroke-dashoffset: 300;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
 }
